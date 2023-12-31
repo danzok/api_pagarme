@@ -1,7 +1,8 @@
-const express = require('express');
+const express = require("express");
 const pagarme = require('pagarme');
 
 const app = express();
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
