@@ -1,5 +1,5 @@
-import express from 'express';
-import pagarme from 'pagarme';
+const express = require('express');
+const pagarme = require('pagarme');
 
 const app = express();
 app.use(express.json());
@@ -36,11 +36,14 @@ app.post('/enc', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('Running serve')
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
 
 
+module.exports = app;
 
 /*
 
