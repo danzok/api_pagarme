@@ -3,6 +3,8 @@ const pagarme = require('pagarme');
 
 const app = express();
 
+// Habilitar o middleware cors para todas as rotas
+app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
